@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<style >
+	.top-m {
+		margin-top: 100px;
+	}
+	body{
+		margin-left: 200px; 
+		margin-right:  200px; 
+	}
+</style>
+
+<center>
+	<div class="top-m">
+	{% for customerr in object_list %}
+		
+			{{ customerr }}
+			
+			<a href="{% url 'customers:customer-pdf-view' customerr.pk  %}"><button class="btn btn-primary">pdf</button></a>
+			<hr>
+			
+		
+	{% endfor %}
+	</div>
+</center>
+{% endblock content %}

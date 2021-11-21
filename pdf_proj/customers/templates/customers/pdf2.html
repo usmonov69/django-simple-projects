@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PDF test</title>
+	<style >
+		.img-m {
+			margin-left:   170px;
+			margin-top: 50px;
+		}
+		.buttom {
+			margin-left:   270px;
+			margin-top: 50px;
+		}
+		
+	</style>
+</head>
+<body>
+	{{ customer	 }}
+	<hr>
+	{{ customer.discription }}
+	<br><br>
+
+	{{ customer.logo }}
+	<br>
+
+
+	<hr>
+	<div class="img-m">
+		<img src="{{ customer.logo.path }}" >
+	</div>
+	<br><br><br><br>
+	<div class="buttom" >&copy; Test PDF  2021</div>
+
+</body>
+</html>
