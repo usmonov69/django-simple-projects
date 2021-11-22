@@ -1,0 +1,20 @@
+{% extends 'base.html'  %}
+
+{% block title %}recom {% endblock title %}
+
+
+{% block content %}
+	<div style="margin-top: 100px;  margin-left:  400px;  ">
+		{% if my_recs %}
+				<h1>My Recommendations: </h1>
+			<ul>
+				{% for p in my_recs %}
+				<li>{{ p.user }}</li>
+				{% endfor %}
+			</ul>
+		{% else %}
+		<h1>You didn't recommend anyone yet</h1>
+		{% endif %}
+		<a href="{% url 'main-view' %}" class="btn btn-primary">back</a>
+	</div>
+{% endblock content %}

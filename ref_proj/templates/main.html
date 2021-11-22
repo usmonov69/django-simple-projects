@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block title  %}home{% endblock title %}
+
+
+{% block content %}
+<center >
+	<div style="margin-top: 100px;  margin-right: 100px;  ">
+	{% if request.user.is_authenticated %}
+		<h1>{{ request.user }}</h1>
+		<a href="{% url 'my-recs-view' %}" class="btn btn-primary btn-sm">See profiles</a><br><br>
+		Your link: <h4>{{ user_code }}</h4>
+	{% else %}
+
+		<a href="{% url 'signup-view' %}">
+			<button class="btn btn-primary">Create an account</button>
+		</a>
+		<a href="{% url 'login'  %}">Login</a>
+	{% endif %}
+	</div>
+	</center>
+{% endblock content %}
+
+ 
