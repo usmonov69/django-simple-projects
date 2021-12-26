@@ -5,8 +5,8 @@ from twilio.rest import Client
 
 # Find your Account SID and Auth Token at twilio.com/console
 # and set the environment variables. See http://twil.io/secure
-account_sid = 'AC6b68d8c9929387108b8b2789ebf2fad7'
-auth_token = 'ec00817a8bc78732ffd10f5e142c7bbf'
+account_sid = ''
+auth_token = ''
 client = Client(account_sid, auth_token)
 
 def send_sms(user_code, phone_numer):
