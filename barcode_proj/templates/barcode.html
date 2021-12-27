@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	
+	<h3>{{ objects.name }}</h3>
+	<hr>
+	<img src="{{ objects.barcode.url }}">
+	<hr>
+	<a class="btn btn-primary" href="{% url 'index' %}">get other barcode</a>
+
+
+{% endblock content %}
